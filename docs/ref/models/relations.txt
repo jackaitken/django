@@ -19,10 +19,10 @@ Related objects reference
                 pass
 
             class Entry(models.Model):
-                blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+                blog = models.ForeignKey(Blog, on_delete=models.CASCADE, null=True)
 
       In the above example, the methods below will be available on
-      the manager ``reporter.article_set``.
+      the manager ``blog.entry_set``.
 
     * Both sides of a :class:`~django.db.models.ManyToManyField` relation::
 
